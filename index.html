@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
+<link rel="stylesheet" href="./style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
 
 <head>
     <meta charset="UTF-8">
@@ -9,22 +15,27 @@
 
 <body>
 
-    <head>
-        <span>El colchon mejor puntuado de Argentina 💛</span>
-        <div>
-            <img alt="store logo" src="./assets/store_logo.svg" />
-            <ul>
+    <header class="header__father">
+
+        <span class="header__first-text">El colchon mejor puntuado de Argentina 💛</span>
+        
+        <div class="header__first-list">
+            <img class="element__hidden-desktop menu-icon" alt="menu mobile" src="./assets/bars-solid.svg" />
+            <img class="logo__store" alt="store logo" src="./assets/store_logo.svg" />
+            <ul class="element__hidden-mobile list-menu">
                 <li>Colchones</li>
                 <li>Bases y sommiers</li>
                 <li>Almohadas</li>
                 <li>Ropa de cama</li>
             </ul>
-            <ul>
+            <ul class="element__hidden-mobile list-menu">
                 <li>Localm</li>
                 <li>Nosotrxs</li>
                 <li>Blog</li>
-                <li><img alt="cart icon" src="./assets/cart_icon.svg" /></li>
+                <li><img class="cart-icon" alt="cart icon" src="./assets/cart_icon.svg" /></li>
             </ul>
+            <img class="element__hidden-desktop cart-icon" alt="cart icon" src="./assets/cart_icon.svg" />
+            
         </div>
         <div>
             <ul>
@@ -54,9 +65,9 @@
                 </li>
             </ul>
         </div>
-    </head>
+    </header>
 
-    
+
 </body>
 
 </html>
