@@ -13,17 +13,10 @@ html {
     --violetLight: #f4ecf5;
     --white: #ffffff;
     --yellow: #f5a203;
+    --violetMedium: #631f99;
 }
 
-.element__hidden-mobile {
-    display: none;
-}
-
-.element__hidden-desktop {
-    display: initial;
-}
-
-.cart-icon {
+.icon__size {
     width: 1.4rem;
 }
 
@@ -43,11 +36,11 @@ html {
     display: inline-block;
     font-size: 0.9rem;
     font-weight: 300;
-    width: 100vw;
     text-align: center;
+    width: 100vw;
+
     padding: 0.4rem
 }
-
 
 .logo__store {
     width: 4.5rem;
@@ -55,10 +48,39 @@ html {
 
 .header__first-list {
     display: flex;
+    gap: 1rem;
     justify-content: space-between;
     margin: 0 2rem;
     padding: 0.3rem;
 }
+
+.header__second-list {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    list-style: none;
+    background-color: var(--violetLight);
+    padding: 0.6rem;
+}
+
+.header__second-list__item {
+    align-items: center;
+    display: flex;
+}
+
+.header__second-list__item__h5 {
+    color: var(--violetMedium);
+    font-weight: 400;
+}
+
+.element__hidden-mobile {
+    display: none;
+}
+
+.element__hidden-desktop {
+    display: initial;
+}
+
 
 @media (min-width: 768px) {
     .element__hidden-mobile {
@@ -70,17 +92,17 @@ html {
     }
 
     .list-menu {
+        align-items: center;
+        color: var(--offBlack);
         display: flex;
         font-size: 0.9rem;
         gap: 1rem;
         list-style: none;
-        align-items: center;
-        color: var(--offBlack);
         transition: color 0.3s ease;
 
         :hover {
-            cursor: pointer;
             color: var(--yellow);
+            cursor: pointer;
         }
     }
 }
