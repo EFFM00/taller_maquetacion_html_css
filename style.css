@@ -10,6 +10,7 @@ html {
 
 :root {
     --grayLight: #f8f8f8;
+    --grayMedium: #999999;
     --offBlack: #303030;
     --violetLight: #f4ecf5;
     --violetMedium: #631f99;
@@ -84,10 +85,10 @@ padding: 0.4rem
 
 .main__first-block {
     background-color: var(--grayLight);
-    width: 100%;
     display: flex;
     justify-content: center;
-    padding: 1rem 0;
+    padding: 0;
+    width: 100%;
 }
 
 .main__first-block_container-info {
@@ -96,10 +97,25 @@ padding: 0.4rem
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, min-content);
     max-width: 84.375rem;
+    position: relative;
+}
+
+.main__first-block__fees {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 5rem;
 }
 
 .main__first-block__path-category {
+    color: var(--grayMedium);
     display: none;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.main__first-block__path-category span {
+    font-weight: 800;
 }
 
 .main__first-block__info_prod__img {
@@ -139,8 +155,17 @@ padding: 0.4rem
         }
     }
 
+    .main__first-block {
+        padding: 1rem 0;
+    }
+
     .main__first-block_container-info {
         grid-template-columns: max-content 1fr;
+    }
+
+    .main__first-block__fees {
+        top: 4rem;
+        width: 10rem;
     }
 
     .main__first-block__path-category {
