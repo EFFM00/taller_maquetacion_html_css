@@ -11,7 +11,11 @@ html {
 :root {
     --grayLight: #f8f8f8;
     --grayMedium: #999999;
+    --green: #40914d;
+    --greenLight: #cbdfce;
     --offBlack: #303030;
+    --orange: #f5a203;
+    --orangeLight: #f9ecd4;
     --violetLight: #f4ecf5;
     --violetMedium: #631f99;
     --white: #ffffff;
@@ -41,7 +45,7 @@ html {
     text-align: center;
     width: 100vw;
 
-padding: 0.4rem
+    padding: 0.4rem
 }
 
 .logo__store {
@@ -101,9 +105,9 @@ padding: 0.4rem
 }
 
 .main__first-block__fees {
+    left: 1rem;
     position: absolute;
     top: 1rem;
-    left: 1rem;
     width: 5rem;
 }
 
@@ -126,10 +130,122 @@ padding: 0.4rem
 }
 
 .main__first-block__info_prod__details {
-    background-color: red;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 }
+
+.main__first-block_description_tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.tag_description {
+    border-radius: 5px;
+    font-size: 0.6rem;
+    height: min-content;
+    padding: 0.2rem 0.4rem;
+}
+
+.main__first-block_description_tag_left {
+    background-color: var(--greenLight);
+    color: var(--green);
+}
+
+.main__first-block_description_tag_right {
+    background-color: var(--orangeLight);
+    color: var(--orange);
+}
+
+.main__first-block_description_title {
+    color: var(--offBlack);
+    font-size: 1.9rem;
+    grid-row: 2/3;
+}
+
+.main__first-block_description_subtitle {
+    color: var(--grayMedium);
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0.3rem 0;
+}
+
+.main__first-block_description_opinions {
+    color: var(--grayMedium);
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin: 0 0 0.5rem 0;
+}
+
+.main__first-block_description_price_block {
+    column-gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: repeat(2, min-content);
+    margin: 0.2rem 0;
+}
+
+.main__first-block_description_price {
+    color: var(--offBlack);
+    font-size: 2.1rem;
+    font-weight: 500;
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.main__first-block_description_installments {
+    color: var(--green);
+    font-size: 1.2rem;
+    font-weight: 500;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.tag_discount_percent {
+    background-color: var(--violetMedium);
+    border-radius: 6px;
+    color: var(--white);
+    font-size: 0.7em;
+    height: min-content;
+    justify-self: flex-start;
+    padding: 0.3rem 0.5rem;
+    white-space: nowrap;
+}
+
+.main__first-block_description_selector {
+    color: var(--offBlack);
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+
+.main__first-block_description_sizes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0.4rem;
+}
+
+.main__first-block_description_sizes_btn button {
+    display: inline-block;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    /* background-color: var(--white); */
+    border: 1px solid var(--grayMedium);
+    transition: border 0.3s ease;
+
+    :hover {
+        /* border: 2px solid var(--yellow); */
+        background-color: red;
+    }
+}
+
+/* .main__first-block_description_sizes_btn h4 {
+
+
+} */
 
 @media (min-width: 768px) {
     .element__hidden-mobile {
@@ -184,5 +300,15 @@ padding: 0.4rem
         grid-column: 2 / 3;
         grid-row: 2 / 3;
         width: 100%;
+    }
+
+    .tag_description {
+        border-radius: 8px;
+        font-size: 0.7rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .main__first-block_description_price_block {
+        /* grid-template-columns: 1fr min-content; */
     }
 }
